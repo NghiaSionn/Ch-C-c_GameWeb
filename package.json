@@ -1,0 +1,21 @@
+{
+  "name": "cho-coc-online",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js",
+    "check": "node scripts/check.mjs",
+    "test": "node --test test/*.test.mjs",
+    "load": "node test/load.mjs",
+    "reports": "node scripts/reports.mjs"
+  },
+  "dependencies": {
+    "three": "0.170.0",
+    "ws": "^8.22.1"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

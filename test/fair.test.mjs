@@ -1,0 +1,3 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {fair,bulkQuote} from '../fair.js';
+test('fair rotates four themes and cycles without changing catalogue',()=>{assert.equal(fair(0).item,'mango');assert.equal(fair(900000).item,'bread');assert.equal(fair(3600000).item,'mango');assert.equal(fair(0).expires,900000)});
+test('wholesale validates stock, price, version, integer quantity and full payment',()=>{const l={qty:5,price:15,version:'v1'};assert.equal(bulkQuote(l,3,15,'v1',45),45);for(const args of [[6,15,'v1',100],[2,14,'v1',100],[2,15,'old',100],[2.5,15,'v1',100],[2,15,'v1',29]])assert.throws(()=>bulkQuote(l,...args));assert.deepEqual(l,{qty:5,price:15,version:'v1'})});
