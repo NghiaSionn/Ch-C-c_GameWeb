@@ -46,3 +46,4 @@ const details=node('details',undefined,'login-details'),summary=node('summary','
 const desiredRoom=new URLSearchParams(location.search).get('room');if(['Sài Gòn 01','Sài Gòn 02'].includes(desiredRoom))$('room').value=desiredRoom;
 
 
+addEventListener('cc-community-open',e=>{if(['tasks','friends','night','account','style'].includes(e.detail))show(e.detail)});
